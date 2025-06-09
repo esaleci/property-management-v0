@@ -125,13 +125,13 @@ export function PropertyTable() {
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
                         <DropdownMenuItem>
-                          <Link href={`/properties/${property.id}`} className="flex items-center">
+                          <Link href={`/dashboard/properties/${property.id}`} className="flex items-center">
                             <Eye className="mr-2 h-4 w-4" />
                             <span>View details</span>
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                          <Link href={`/properties/edit/${property.id}`} className="flex items-center">
+                          <Link href={`/dashboard/properties/edit/${property.id}`} className="flex items-center">
                             <Edit className="mr-2 h-4 w-4" />
                             <span>Edit property</span>
                           </Link>
@@ -195,13 +195,13 @@ export function PropertyTable() {
                   </div>
                 </div>
                 <div className="flex justify-end gap-2 mt-4">
-                  <Link href={`/properties/${property.id}`}>
+                  <Link href={`/dashboard/properties/${property.id}`}>
                     <Button variant="outline" size="sm">
                       <Eye className="h-4 w-4 mr-1" />
                       View
                     </Button>
                   </Link>
-                  <Link href={`/properties/edit/${property.id}`}>
+                  <Link href={`/dashboard/properties/edit/${property.id}`}>
                     <Button variant="outline" size="sm">
                       <Edit className="h-4 w-4 mr-1" />
                       Edit

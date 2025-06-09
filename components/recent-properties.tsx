@@ -68,12 +68,16 @@ export function RecentProperties() {
                     <DropdownMenuContent align="end">
                       <DropdownMenuLabel>Actions</DropdownMenuLabel>
                       <DropdownMenuItem>
-                        <Eye className="mr-2 h-4 w-4" />
-                        <span>View details</span>
+                        <Link href={`/dashboard/properties/${property.id}`} className="flex items-center">
+                          <Eye className="mr-2 h-4 w-4" />
+                          <span>View details</span>
+                        </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        <Edit className="mr-2 h-4 w-4" />
-                        <span>Edit property</span>
+                        <Link href={`/dashboard/properties/edit/${property.id}`} className="flex items-center">
+                          <Edit className="mr-2 h-4 w-4" />
+                          <span>Edit property</span>
+                        </Link>
                       </DropdownMenuItem>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem className="text-red-600">
@@ -126,14 +130,18 @@ export function RecentProperties() {
                 </div>
               </div>
               <div className="flex justify-end gap-2 mt-4">
-                <Button variant="outline" size="sm">
-                  <Eye className="h-4 w-4 mr-1" />
-                  View
-                </Button>
-                <Button variant="outline" size="sm">
-                  <Edit className="h-4 w-4 mr-1" />
-                  Edit
-                </Button>
+                <Link href={`/dashboard/properties/${property.id}`}>
+                  <Button variant="outline" size="sm">
+                    <Eye className="h-4 w-4 mr-1" />
+                    View
+                  </Button>
+                </Link>
+                <Link href={`/dashboard/properties/edit/${property.id}`}>
+                  <Button variant="outline" size="sm">
+                    <Edit className="h-4 w-4 mr-1" />
+                    Edit
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
@@ -141,7 +149,7 @@ export function RecentProperties() {
       </div>
 
       <div className="flex items-center justify-end p-4">
-        <Link href="/properties">
+        <Link href="/dashboard/properties">
           <Button variant="outline">View All Properties</Button>
         </Link>
       </div>

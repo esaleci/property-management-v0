@@ -136,13 +136,13 @@ export function TenantsTable() {
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
                         <DropdownMenuItem>
-                          <Link href={`/tenants/${tenant.id}`} className="flex items-center">
+                          <Link href={`/dashboard/tenants/${tenant.id}`} className="flex items-center">
                             <Eye className="mr-2 h-4 w-4" />
                             <span>View details</span>
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                          <Link href={`/tenants/edit/${tenant.id}`} className="flex items-center">
+                          <Link href={`/dashboard/tenants/edit/${tenant.id}`} className="flex items-center">
                             <Edit className="mr-2 h-4 w-4" />
                             <span>Edit tenant</span>
                           </Link>
@@ -211,13 +211,13 @@ export function TenantsTable() {
                   </div>
                 </div>
                 <div className="flex justify-end gap-2 mt-4">
-                  <Link href={`/tenants/${tenant.id}`}>
+                  <Link href={`/dashboard/tenants/${tenant.id}`}>
                     <Button variant="outline" size="sm">
                       <Eye className="h-4 w-4 mr-1" />
                       View
                     </Button>
                   </Link>
-                  <Link href={`/tenants/edit/${tenant.id}`}>
+                  <Link href={`/dashboard/tenants/edit/${tenant.id}`}>
                     <Button variant="outline" size="sm">
                       <Edit className="h-4 w-4 mr-1" />
                       Edit

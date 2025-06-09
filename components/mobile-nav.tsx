@@ -19,37 +19,37 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     title: "Dashboard",
-    href: "/",
+    href: "/dashboard",
     icon: <Home className="h-5 w-5" />,
   },
   {
     title: "Properties",
-    href: "/properties",
+    href: "/dashboard/properties",
     icon: <Building className="h-5 w-5" />,
   },
   {
     title: "Tenants",
-    href: "/tenants",
+    href: "/dashboard/tenants",
     icon: <Users className="h-5 w-5" />,
   },
   {
     title: "Maintenance",
-    href: "/maintenance",
+    href: "/dashboard/maintenance",
     icon: <Wrench className="h-5 w-5" />,
   },
   {
     title: "Documents",
-    href: "/documents",
+    href: "/dashboard/documents",
     icon: <FileText className="h-5 w-5" />,
   },
   {
     title: "Reports",
-    href: "/reports",
+    href: "/dashboard/reports",
     icon: <BarChart3 className="h-5 w-5" />,
   },
   {
     title: "Settings",
-    href: "/settings",
+    href: "/dashboard/settings",
     icon: <Settings className="h-5 w-5" />,
   },
 ]

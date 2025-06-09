@@ -49,7 +49,7 @@ export default function LoginPage() {
           title: "Login successful",
           description: "Welcome back to your property management dashboard.",
         })
-        router.push("/")
+        router.push("/dashboard")
       } else {
         toast({
           title: "Login failed",
@@ -79,7 +79,7 @@ export default function LoginPage() {
           title: "Demo login successful",
           description: "You are now logged in as a demo user.",
         })
-        router.push("/")
+        router.push("/dashboard")
       }
     } catch (error) {
       toast({

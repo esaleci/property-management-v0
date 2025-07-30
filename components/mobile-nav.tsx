@@ -20,36 +20,43 @@ const navItems: NavItem[] = [
   {
     title: "Dashboard",
     href: "/dashboard",
+    
     icon: <Home className="h-5 w-5" />,
   },
   {
     title: "Properties",
     href: "/dashboard/properties",
+    dis:false,
     icon: <Building className="h-5 w-5" />,
   },
   {
     title: "Tenants",
     href: "/dashboard/tenants",
+    dis:false,
     icon: <Users className="h-5 w-5" />,
   },
   {
     title: "Maintenance",
-    href: "/dashboard/maintenance",
+    href: "#",
+    dis:true,
     icon: <Wrench className="h-5 w-5" />,
   },
   {
     title: "Documents",
-    href: "/dashboard/documents",
+    href: "#",
+    dis:true,
     icon: <FileText className="h-5 w-5" />,
   },
   {
     title: "Reports",
     href: "/dashboard/reports",
+    dis:false,
     icon: <BarChart3 className="h-5 w-5" />,
   },
   {
     title: "Settings",
-    href: "/dashboard/settings",
+    href: "#",
+    dis:true,
     icon: <Settings className="h-5 w-5" />,
   },
 ]
@@ -78,11 +85,17 @@ export function MobileNav() {
             <Link
               key={item.href}
               href={item.href}
+             
               onClick={() => setOpen(false)}
               className={cn(
                 "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
                 pathname === item.href ? "bg-primary text-primary-foreground" : "hover:bg-muted hover:text-foreground",
               )}
+               style={{
+          pointerEvents: item.dis ? 'none' : 'auto',
+          opacity: item.dis ? 0.5 : 1,
+          cursor: item.dis ? 'not-allowed' : 'pointer',
+        }}
             >
               {item.icon}
               {item.title}

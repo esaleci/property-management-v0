@@ -25,8 +25,9 @@ export function MainNav() {
           Tenants
         </Link>
         <Link
-          href="/dashboard/maintenance"
-          className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+          disabled 
+          href="#"
+          className="text-sm font-medium text-muted-foreground transition-colors  "
         >
           Maintenance
         </Link>
